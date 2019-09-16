@@ -2,7 +2,6 @@ package Pages;
 
 import io.appium.java_client.AppiumDriver;
 import org.openqa.selenium.By;
-import org.testng.reporters.jq.Main;
 
 public class MainPage {
     private AppiumDriver driver;
@@ -10,7 +9,9 @@ public class MainPage {
     //Construtor da classe:
     public MainPage (AppiumDriver driver) {this.driver = driver;}
 
-    public void ClickStartWebPageButton (){
+    public WebViewChooserListPage ClickStartWebPageButton (){
         driver.findElement(By.id("io.selendroid.testapp:id/buttonStartWebview")).click();
+
+        return new WebViewChooserListPage(driver);
     }
 }

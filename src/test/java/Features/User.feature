@@ -16,14 +16,26 @@ Feature: Register a new user
 
     When user clicking in StartWebView button
 
-    And insert the username as "<Wellynton>"
-    And choose his favorite car
-      |Volvo      |
-      |Mercedes   |
-      |Audi       |
-    And click in Send me your name!
+    And click on WebView chooser list
+    And select the WebView type
+      |'Say Hello'-Demo      |
+      |htmlTestPage          |
+      |formPage              |
+      |SelectableItemsPage   |
+      |nestedPage            |
+      |javaScriptPage        |
+      |missedJsReferencePage |
+      |ActualXhtmlPage       |
+      |ClickSource           |
+      |Clicks                |
+      |Long Content Page     |
+      |TestClickPage1        |
+      |TestClickPage2        |
+      |about:blank           |
+      |iframes               |
+    And click a link inside the page
 
-    Then I should see what is your favorite car and your name
+    Then user should be the text inside the text box
 
 
 
